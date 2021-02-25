@@ -11,9 +11,11 @@
     <form method="GET">
       <textarea id="textArea" onfocus="clearText(this);" name="Input" rows="8" cols="40">Paste words to go brr...</textarea>
       <br/>
-      <input onclick="getText(); return false;" id="submitButton" type="submit" name="submit" value="Go!"/>
+      <input onclick="getText(); return false;" id="submitButton" type="button" name="submit" value="Go!"/>
 
     </form>
+    <p id="resultTitle"></p>
+    <p id="resultP"></p>
 
   </body>
 </html>

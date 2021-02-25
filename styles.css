@@ -20,3 +20,9 @@ textarea {
 #submitButton {
   background-color: #a6a6a6;
 }
+
+#resultP {
+  display: inline-block;
+  width: 35%;
+  text-align: center;
+}
