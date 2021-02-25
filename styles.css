@@ -1,0 +1,22 @@
+body {
+  background-color: #262626;
+  text-align: center;
+}
+
+h1 {
+  color: #8c8c8c;
+  text-align: center;
+}
+
+p {
+  color: #8c8c8c;
+  text-align: center;
+}
+
+textarea {
+  background-color: #a6a6a6;
+}
+
+#submitButton {
+  background-color: #a6a6a6;
+}
