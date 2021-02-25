@@ -9,10 +9,9 @@
   <body>
     <h1>Words Go Brr</h1>
     <form method="GET">
-      <!-- <p>Enter words below:</p> -->
-      <textarea onfocus="clearText(this);" name="Input" rows="8" cols="40">Paste words to go brr...</textarea>
+      <textarea id="textArea" onfocus="clearText(this);" name="Input" rows="8" cols="40">Paste words to go brr...</textarea>
       <br/>
-      <input id="submitButton" type="submit" name="submit" value="Go!"/>
+      <input onclick="getText(); return false;" id="submitButton" type="submit" name="submit" value="Go!"/>
 
     </form>
 
