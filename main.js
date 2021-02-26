@@ -28,8 +28,10 @@ async function readText(textInput){
     //print.innerHTML = words[i];
     var word = words[i];
     print.innerHTML = word;
-    var delay = 250;
-    await sleep(delay);
+    var delay = 250; // default delay length
+    wordLength = word.length;
+    delayCalculated = wordLength * 50;
+    await sleep(delayCalculated);
     //setTimeout(displayText(print, word), 1000);
     //setTimeout(displayText, 1000, print, word);
     //setTimeout(function() { displayText(print, word);}, 500);
