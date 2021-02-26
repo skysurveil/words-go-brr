@@ -18,7 +18,7 @@ function getText() {
 }
 
 
-function readText(textInput){
+async function readText(textInput){
   //console.log(textblock.split(" ").length);
   var textblock = textInput;
   let words = textblock.split(" ");
@@ -27,7 +27,10 @@ function readText(textInput){
     //console.log(words[i]);
     //print.innerHTML = words[i];
     var word = words[i];
-    setTimeout(displayText(print, word), 1000);
+    //setTimeout(displayText(print, word), 10000);
+    console.log(word);
+    print.innerHTML = word;
+    await sleep(50);
   }
 
 }
@@ -35,4 +38,8 @@ function readText(textInput){
 function displayText(print, word) {
   console.log(word);
   print.innerHTML = word;
+}
+
+function sleep(ms){
+  return new Promise(resolve => setTimeout(resolve, ms))
 }
