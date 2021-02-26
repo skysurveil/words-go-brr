@@ -26,3 +26,18 @@ textarea {
   width: 35%;
   text-align: center;
 }
+
+#settings {
+  border: solid 1px white;
+  display: inline-block;
+  width: 40%;
+}
+
+#settingsP {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.light-mode-body {
+  background-color: white;
+}

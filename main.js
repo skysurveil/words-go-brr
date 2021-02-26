@@ -48,3 +48,8 @@ function displayText(print, word) {
   console.log(word);
   print.innerHTML = word;
 }
+
+function toggleLightMode() {
+  var bodyElement = document.body;
+  bodyElement.classList.toggle("light-mode-body");
+}
