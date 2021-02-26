@@ -27,7 +27,9 @@ function readText(textInput){
     //console.log(words[i]);
     //print.innerHTML = words[i];
     var word = words[i];
-    setTimeout(displayText(print, word), 1000);
+    //setTimeout(displayText(print, word), 1000);
+    setTimeout(displayText, 1000, print, word);
+    //setTimeout(function() { displayText(print, word);}, 500);
   }
 
 }
