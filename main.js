@@ -46,14 +46,14 @@ function uploadImage(event){
               temp = temp + text[i];
           }
         }
-        console.log(wordArray[10]);
-        console.log("------------------------------");
-        var temp = wordArray[10];
-        for(var i = 0; i < temp.length; i++){
-          console.log(temp[i]);
-        }
-        console.log(hasWhiteSpace(wordArray[10]));
-        console.log("-----------------------------");
+        // console.log(wordArray[10]);
+        // console.log("------------------------------");
+        // var temp = wordArray[10];
+        // for(var i = 0; i < temp.length; i++){
+        //   console.log(temp[i]);
+        // }
+        // console.log(hasWhiteSpace(wordArray[10]));
+        // console.log("-----------------------------");
         // for(var i=0; i<counter; i++){
         //   console.log(wordArray[i]);
         // }
@@ -103,61 +103,6 @@ function displayText(print, word) {
 
 function sleep(ms){
   return new Promise(resolve => setTimeout(resolve, ms))
-}
-
-function isChar(a){
-  t = a.toLowerCase();
-  if(t === 'a' ||
-     t === 'b' ||
-     t === 'c' ||
-     t === 'd' ||
-     t === 'e' ||
-     t === 'f' ||
-     t === 'g' ||
-     t === 'h' ||
-     t === 'i' ||
-     t === 'j' ||
-     t === 'k' ||
-     t === 'l' ||
-     t === 'm' ||
-     t === 'n' ||
-     t === 'o' ||
-     t === 'p' ||
-     t === 'q' ||
-     t === 'r' ||
-     t === 's' ||
-     t === 't' ||
-     t === 'u' ||
-     t === 'v' ||
-     t === 'w' ||
-     t === 'x' ||
-     t === 'y' ||
-     t === 'z' )
-     {
-       return true;
-     }
-     else{
-       return false;
-     }
-}
-
-function isDigit(a){
-  if(a === '0' ||
-     a === '1' ||
-     a === '2' ||
-     a === '3' ||
-     a === '4' ||
-     a === '5' ||
-     a === '6' ||
-     a === '7' ||
-     a === '8' ||
-     a === '9'
-  ){
-    return true;
-  }
-  else{
-    return false;
-  }
 }
 
 function hasWhiteSpace(s) {
