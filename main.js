@@ -1,4 +1,5 @@
 
+
 /* clearText clears the textArea default text when focused */
 function clearText(element) {
   element.value = '';
@@ -15,6 +16,7 @@ function getText() {
 
   resultElement = document.getElementById("resultP");
   //resultElement.innerHTML = textInput;
+
   readText(textInput);
 }
 
@@ -88,4 +90,19 @@ function sleep(ms){
 
 function hasWhiteSpace(s) {
   return s.indexOf('\n') >= 0;
+
+  readText();
+}
+
+
+function readText(){
+  //console.log(textblock.split(" ").length);
+  let words = textblock.split(" ");
+  print = document.getElementById("resultP");
+  for(var i=0; i<words.length; i++){
+    console.log(words[i]);
+    print.innerHTML = words[i];
+  }
+
+
 }
