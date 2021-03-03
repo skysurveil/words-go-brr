@@ -14,8 +14,14 @@
       <input onclick="getText(); return false;" id="submitButton" type="button" name="submit" value="Go!"/>
 
     </form>
+
+    <script src='https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js'></script>
     <p id="resultTitle"></p>
     <p id="resultP"></p>
+    <p><input type="file"  accept="image/*" name="image" id="file"  onchange="uploadImage(event)" style="display: none;"></p>
+    <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+    <p><img id="output" width="500" /></p>
+
 
   </body>
 </html>
