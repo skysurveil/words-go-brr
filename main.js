@@ -46,18 +46,6 @@ function uploadImage(event){
               temp = temp + text[i];
           }
         }
-        // console.log(wordArray[10]);
-        // console.log("------------------------------");
-        // var temp = wordArray[10];
-        // for(var i = 0; i < temp.length; i++){
-        //   console.log(temp[i]);
-        // }
-        // console.log(hasWhiteSpace(wordArray[10]));
-        // console.log("-----------------------------");
-        // for(var i=0; i<counter; i++){
-        //   console.log(wordArray[i]);
-        // }
-
         readTextFromOCR(wordArray);
       })();
 
@@ -66,15 +54,11 @@ function uploadImage(event){
 }
 
 async function readText(textInput){
-  //console.log(textblock.split(" ").length);
   var textblock = textInput;
   let words = textblock.split(" ");
   print = document.getElementById("resultP");
   for(var i=0; i<words.length; i++){
-    //console.log(words[i]);
-    //print.innerHTML = words[i];
     var word = words[i];
-    //setTimeout(displayText(print, word), 10000);
     console.log(word);
     print.innerHTML = word;
     await sleep(500);
@@ -83,9 +67,6 @@ async function readText(textInput){
 }
 
 async function readTextFromOCR(textInput){
-  //console.log(textblock.split(" ").length);
-  // var textblock = textInput;
-  // let words = textblock.split(" ");
    print = document.getElementById("resultP");
   for(var i=0; i<textInput.length; i++){
     console.log(textInput[i]);
