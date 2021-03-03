@@ -43,3 +43,9 @@ function displayText(print, word) {
 function sleep(ms){
   return new Promise(resolve => setTimeout(resolve, ms))
 }
+
+function uploadImage(event){
+
+    var image = document.getElementById('output');
+    image.src = URL.createObjectURL(event.target.files[0]);
+}
