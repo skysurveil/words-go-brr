@@ -93,16 +93,3 @@ function hasWhiteSpace(s) {
 
   readText();
 }
-
-
-function readText(){
-  //console.log(textblock.split(" ").length);
-  let words = textblock.split(" ");
-  print = document.getElementById("resultP");
-  for(var i=0; i<words.length; i++){
-    console.log(words[i]);
-    print.innerHTML = words[i];
-  }
-
-
-}
