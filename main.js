@@ -18,7 +18,7 @@ function getText() {
 }
 
 
-async function readText(textInput){
+ async function readText(textInput){
   //console.log(textblock.split(" ").length);
   var textblock = textInput;
   let words = textblock.split(" ");
@@ -30,9 +30,8 @@ async function readText(textInput){
     //setTimeout(displayText(print, word), 10000);
     console.log(word);
     print.innerHTML = word;
-    await sleep(50);
+    await sleep(150);
   }
-
 }
 
 function displayText(print, word) {
@@ -45,7 +44,6 @@ function sleep(ms){
 }
 
 function uploadImage(event){
-
     var image = document.getElementById('output');
     image.src = URL.createObjectURL(event.target.files[0]);
 }
