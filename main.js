@@ -1,4 +1,10 @@
 
+var slider = document.getElementById("myRange");
+var output = document.getElementById("wordspermin");
+var wpm = slider.value;//wpm
+output.innerHTML = slider.value;//for printing on the screen
+
+
 
 /* clearText clears the textArea default text when focused */
 function clearText(element) {
@@ -63,10 +69,14 @@ async function readText(textInput){
     var word = words[i];
     console.log(word);
     print.innerHTML = word;
-    await sleep(500);
+    var speed = 60000/wpm;// this is the number of milliseconds between each word to give you wpm
+    await sleep(speed);
+
   }
 
 }
+
+
 
 async function readTextFromOCR(textInput){
    print = document.getElementById("resultP");
@@ -74,7 +84,8 @@ async function readTextFromOCR(textInput){
     console.log(textInput[i]);
     var word = textInput[i];
     print.innerHTML = word;
-    await sleep(500);
+    var speed = 60000/wpm;// this is the number of milliseconds between each word to give you wpm
+    await sleep(speed);
   }
 
 }
@@ -92,4 +103,11 @@ function hasWhiteSpace(s) {
   return s.indexOf('\n') >= 0;
 
   readText();
+}
+
+
+//getting the up todate wpm
+slider.oninput = function(){
+  output.innerHTML = this.value;
+  wpm = this.value;
 }

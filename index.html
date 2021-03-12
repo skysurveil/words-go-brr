@@ -14,7 +14,12 @@
       <input onclick="getText(); return false;" id="submitButton" type="button" name="submit" value="Go!"/>
 
     </form>
-
+    <div class="slidecontainer">
+        <p>WPM: <span id="wordspermin"></span></p>
+        <input type="range" min="200" max="400" step="10" class="slider" id="myRange" value="250" >
+        
+      </div>
+      <script src="main.js"></script>
     <script src='https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js'></script>
     <p id="resultTitle"></p>
     <p id="resultP"></p>
