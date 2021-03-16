@@ -70,7 +70,14 @@ async function readText(textInput){
     console.log(word);
     print.innerHTML = word;
     var speed = 60000/wpm;// this is the number of milliseconds between each word to give you wpm
-    await sleep(speed);
+    if(word.length < 4){
+      await sleep(speed - 15);
+    }else if(word.length < 8){
+      await sleep(speed);
+    }else{
+      await sleep(speed + 35);
+    }
+
 
   }
 
@@ -85,7 +92,13 @@ async function readTextFromOCR(textInput){
     var word = textInput[i];
     print.innerHTML = word;
     var speed = 60000/wpm;// this is the number of milliseconds between each word to give you wpm
-    await sleep(speed);
+    if(word.length < 4){//possible variable speed based on word length
+      await sleep(speed - 15);
+    }else if(word.length < 8){
+      await sleep(speed);
+    }else{
+      await sleep(speed + 35);
+    }
   }
 
 }
