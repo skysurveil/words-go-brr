@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Words Go Brr</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" id="theme">
     <script src="main.js" type="text/javascript"></script>
   </head>
   <body>
@@ -26,6 +26,7 @@
     <p><input type="file"  accept="image/*" name="image" id="file"  onchange="uploadImage(event)" style="display: none;"></p>
     <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
     <p><img id="output" width="500" /></p>
+    <button onclick="swap()" id="swap">Toggle dark mode</button>
 
 
   </body>

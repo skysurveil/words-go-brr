@@ -78,7 +78,6 @@ async function readText(textInput){
       await sleep(speed + 35);
     }
 
-
   }
 
 }
@@ -123,4 +122,11 @@ function hasWhiteSpace(s) {
 slider.oninput = function(){
   output.innerHTML = this.value;
   wpm = this.value;
+}
+
+
+//toggle light and dark theme
+function swap(){
+  var element = document.body;
+  element.classList.toggle("light-mode");
 }
