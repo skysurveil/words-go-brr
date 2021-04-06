@@ -1,4 +1,10 @@
 
+var slider = document.getElementById("myRange");
+var output = document.getElementById("wordspermin");
+var wpm = slider.value;//wpm
+output.innerHTML = slider.value;//for printing on the screen
+
+
 
 /* clearText clears the textArea default text when focused */
 function clearText(element) {
@@ -63,10 +69,20 @@ async function readText(textInput){
     var word = words[i];
     console.log(word);
     print.innerHTML = word;
-    await sleep(500);
+    var speed = 60000/wpm;// this is the number of milliseconds between each word to give you wpm
+    if(word.length < 4){
+      await sleep(speed - 15);
+    }else if(word.length < 8){
+      await sleep(speed);
+    }else{
+      await sleep(speed + 35);
+    }
+
   }
 
 }
+
+
 
 async function readTextFromOCR(textInput){
    print = document.getElementById("resultP");
@@ -74,7 +90,14 @@ async function readTextFromOCR(textInput){
     console.log(textInput[i]);
     var word = textInput[i];
     print.innerHTML = word;
-    await sleep(500);
+    var speed = 60000/wpm;// this is the number of milliseconds between each word to give you wpm
+    if(word.length < 4){//possible variable speed based on word length
+      await sleep(speed - 15);
+    }else if(word.length < 8){
+      await sleep(speed);
+    }else{
+      await sleep(speed + 35);
+    }
   }
 
 }
@@ -92,4 +115,18 @@ function hasWhiteSpace(s) {
   return s.indexOf('\n') >= 0;
 
   readText();
+}
+
+
+//getting the up todate wpm
+slider.oninput = function(){
+  output.innerHTML = this.value;
+  wpm = this.value;
+}
+
+
+//toggle light and dark theme
+function swap(){
+  var element = document.body;
+  element.classList.toggle("light-mode");
 }

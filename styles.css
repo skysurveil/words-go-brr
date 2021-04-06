@@ -1,17 +1,17 @@
 body {
   background-color: #262626;
   text-align: center;
+  color: #8c8c8c;
 }
 
-h1 {
-  color: #8c8c8c;
-  text-align: center;
+.light-mode {
+  background-color: #ebebeb;
+  color: black;
 }
 
-p {
-  color: #8c8c8c;
-  text-align: center;
-}
+
+
+
 
 textarea {
   background-color: #a6a6a6;
@@ -25,4 +25,52 @@ textarea {
   display: inline-block;
   width: 35%;
   text-align: center;
+  font-size: xxx-large;
+}
+
+#swap{
+  background-color: #a6a6a6;
+}
+
+
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+
+}
+
+
+
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 40%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #a6a6a6; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 35px; /* Slider handle height */
+  background: #969696; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
 }
