@@ -35,6 +35,11 @@ textarea {
 #replay{
   background-color: #a6a6a6;
 }
+
+#file{
+  background-color: #a6a6a6;
+  color: #262626;
+}
 .slidecontainer {
   width: 100%; /* Width of the outside container */
 
