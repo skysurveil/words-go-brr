@@ -12,8 +12,8 @@
       <textarea id="textArea" onfocus="clearText(this);" name="Input" rows="8" cols="40">Paste words to go brr...</textarea>
       <br/>
       <input onclick="getText(); return false;" id="submitButton" type="button" name="submit" value="Go!"/>
-
     </form>
+    <button onclick="replay()" id="replay">replay</button>
     <div class="slidecontainer">
         <p>WPM: <span id="wordspermin"></span></p>
         <input type="range" min="200" max="500" step="10" class="slider" id="myRange" value="350" >
