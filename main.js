@@ -2,8 +2,9 @@
 var slider = document.getElementById("myRange");
 var output = document.getElementById("wordspermin");
 var wpm = slider.value;//wpm
+console.log(wpm);
 output.innerHTML = slider.value;//for printing on the screen
-
+var recent;
 
 
 /* clearText clears the textArea default text when focused */
@@ -79,6 +80,7 @@ async function readText(textInput){
     }
 
   }
+  recent = words;
 
 }
 
@@ -99,6 +101,7 @@ async function readTextFromOCR(textInput){
       await sleep(speed + 35);
     }
   }
+  recent = textInput;
 
 }
 
@@ -124,6 +127,22 @@ slider.oninput = function(){
   wpm = this.value;
 }
 
+async function replay(){
+  for(var i=0; i<recent.length; i++){
+    var word = recent[i];
+    console.log(word);
+    print.innerHTML = word;
+    var speed = 60000/wpm;// this is the number of milliseconds between each word to give you wpm
+    if(word.length < 4){
+      await sleep(speed - 15);
+    }else if(word.length < 8){
+      await sleep(speed);
+    }else{
+      await sleep(speed + 35);
+    }
+
+  }
+}
 
 //toggle light and dark theme
 function swap(){
