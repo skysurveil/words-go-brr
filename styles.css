@@ -4,11 +4,30 @@ body {
   color: #8c8c8c;
 }
 
+.dark-mode {
+  background-color: #262626;
+  color: #8c8c8c;
+}
+
 .light-mode {
   background-color: #ebebeb;
   color: black;
 }
 
+.blue-mode {
+  background-color: #99ddff;
+  color: black;
+}
+
+.red-mode {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.green-mode {
+  background-color: #00e600;
+  color: black;
+}
 
 
 

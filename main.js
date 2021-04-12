@@ -162,6 +162,49 @@ function swap(){
   element.classList.toggle("light-mode");
 }
 
+function changeTheme(){
+  var colorTheme = document.getElementById("backgroundTheme").value;
+  if (colorTheme == 'blue'){
+    changeToBlue();
+  }
+  else if (colorTheme == 'red'){
+    changeToRed();
+  }
+  else if (colorTheme == 'green'){
+    changeToGreen();
+  }
+  else {
+    var element = document.body;
+    element.classList.remove("blue-mode", "red-mode", "green-mode");
+    changeToDark();
+  }
+
+}
+
+function changeToBlue(){
+  var element = document.body;
+  element.classList.remove("red-mode", "green-mode", "dark-mode");
+  element.classList.toggle("blue-mode");
+}
+
+function changeToRed() {
+  var element = document.body;
+  element.classList.remove("blue-mode", "green-mode", "dark-mode");
+  element.classList.toggle("red-mode");
+}
+
+function changeToGreen() {
+  var element = document.body;
+  element.classList.remove("blue-mode", "red-mode", "dark-mode");
+  element.classList.toggle("green-mode");
+}
+
+function changeToDark() {
+  var element = document.body;
+  element.classList.remove("blue-mode", "red-mode", "green-mode");
+  element.classList.toggle("dark-mode");
+}
+
 // test function to utilize potential TTS solution
 function speak(){
   var msg = new SpeechSynthesisUtterance();
