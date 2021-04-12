@@ -2,6 +2,9 @@
 var slider = document.getElementById("myRange");
 var output = document.getElementById("wordspermin");
 var wpm = slider.value;//wpm
+var ttsSpeed; /* speed cannot be assigned by radio button here because this is loaded before HTML is done*
+Instead, it is assigned at the beginning of speakText */
+
 console.log(wpm);
 output.innerHTML = slider.value;//for printing on the screen
 var recent;
@@ -25,6 +28,15 @@ function getText() {
   //resultElement.innerHTML = textInput;
 
   readText(textInput);
+}
+
+/* getTextTTS is the getText function for the text to speech functionality (See above getText()) */
+function getTextTTS() {
+  var ttsInput = document.getElementById("textArea").value;
+  titleElement = document.getElementById("resultTitle");
+  resultElement = document.getElementById("resultP");
+  // Calls speakText function with the user inputted text.
+  speakText(ttsInput);
 }
 
 function uploadImage(event){
@@ -148,4 +160,24 @@ async function replay(){
 function swap(){
   var element = document.body;
   element.classList.toggle("light-mode");
+}
+
+// test function to utilize potential TTS solution
+function speak(){
+  var msg = new SpeechSynthesisUtterance();
+  msg.text = "Testing the text to speech";
+  window.speechSynthesis.speak(msg);
+}
+
+
+
+// speakText is the text to speech function that takes user input from getTextTTS
+// as a parameter and handles TTS functionality.
+async function speakText(ttsInput){
+  ttsSpeed = document.querySelector('input[name="ttsOption"]:checked').value; // assigns speed from selected radio button.
+  ttsString = ttsInput.toString();
+  var msg = new SpeechSynthesisUtterance();
+  msg.rate = ttsSpeed;
+  msg.text = ttsString;
+  window.speechSynthesis.speak(msg);
 }
