@@ -2,7 +2,7 @@
   include_once 'header.php';
 ?>
 
-  <script src="main.js" type="text/javascript"></script>
+
   <body>
     <h1>Words Go Brr</h1>
     <form method="GET">
@@ -19,7 +19,6 @@
 
       </div>
       <script src="main.js"></script>
-      <script src='https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js'></script>
       <p id="resultTitle"></p>
       <p id="resultP"></p>
       <p><input type="file"  accept="image/*" name="image" id="file"  onchange="uploadImage(event)" ></p>
@@ -49,6 +48,6 @@
       </select>
       <input onclick="changeTheme()" type="submit" value="Apply">
 
-  </body>
-</div>
-</html>
+      <?php
+        include_once 'footer.php';
+      ?>
