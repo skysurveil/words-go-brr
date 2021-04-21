@@ -4,11 +4,14 @@
 
   <section class="signup-form">
     <h2>Profile</h2>
-    <form action="includes/login.inc.php" method="post">
-      <input type="text" name="username_email" placeholder="Username/Email...">
-      <input type="password" name="pwd" placeholder="Password...">
-      <button type="submit" name="submit">Profile</button>
-    </form>
+      <ul>
+        <?php
+          echo "<li>Username: " . $_SESSION["userName"] . "</li> ";
+          echo "<li>Name: " . $_SESSION["firstName"] . " " . $_SESSION["lastName"] . "</li> ";
+          echo "<li>Account Creation data: " . $_SESSION["joinDate"] . "</li> ";
+          echo "<li>Score: " . $_SESSION["score"] . "</li> ";
+         ?>
+      </ul>
   </section>
 
 

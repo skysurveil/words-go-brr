@@ -4,6 +4,8 @@ var output = document.getElementById("wordspermin");
 var wpm = slider.value;//wpm
 var ttsSpeed; /* speed cannot be assigned by radio button here because this is loaded before HTML is done*
 Instead, it is assigned at the beginning of speakText */
+var currentTheme = "";
+
 
 console.log(wpm);
 output.innerHTML = slider.value;//for printing on the screen
@@ -45,8 +47,14 @@ function uploadImage(event){
     image.src = URL.createObjectURL(event.target.files[0]);
     image.onload = function(){
       const {createWorker} = Tesseract;
+
+      // Trying to add a logger.
+      const worker = createWorker({
+          logger: m => console.log(m), // Add logger here
+      });
+
       (async () => {
-        const worker = createWorker();
+        //const worker = createWorker();
         await worker.load();
         await worker.loadLanguage('eng');
         await worker.initialize('eng');
@@ -67,6 +75,7 @@ function uploadImage(event){
               temp = temp + text[i];
           }
         }
+        await worker.terminate();
         readTextFromOCR(wordArray);
       })();
 
@@ -165,43 +174,76 @@ function swap(){
 function changeTheme(){
   var colorTheme = document.getElementById("backgroundTheme").value;
   if (colorTheme == 'blue'){
+    currTheme = "blue";
     changeToBlue();
   }
   else if (colorTheme == 'red'){
+    currTheme = "red";
     changeToRed();
   }
   else if (colorTheme == 'green'){
+    currTheme = "green";
     changeToGreen();
+  }
+  else if (colorTheme == 'lightgreen'){
+    currTheme = "lightgreen";
+    changeToLightGreen();
   }
   else {
     var element = document.body;
-    element.classList.remove("blue-mode", "red-mode", "green-mode");
+    element.classList.remove("blue-mode", "red-mode", "green-mode", "lightgreen-mode");
+    currTheme = "";
     changeToDark();
   }
+}
 
+function currentTheme(){
+  //var currTheme = ' <?php echo $currColorTheme; ?> ' ;
+  console.log(currTheme);
+  if(currTheme == "blue"){
+    changeToBlue();
+  }
+  else if(currTheme == "red"){
+    changeToRed();
+  }
+  else if(currTheme == "green"){
+    changeToGreen();
+  }
+  else if(currTheme == "lightgreen"){
+    changeToLightGreen();
+  }
+  else{
+    changeToDark();
+  }
 }
 
 function changeToBlue(){
   var element = document.body;
-  element.classList.remove("red-mode", "green-mode", "dark-mode");
+  element.classList.remove("red-mode", "green-mode", "dark-mode", "lightgreen-mode");
   element.classList.toggle("blue-mode");
 }
 
 function changeToRed() {
   var element = document.body;
-  element.classList.remove("blue-mode", "green-mode", "dark-mode");
+  element.classList.remove("blue-mode", "green-mode", "dark-mode", "lightgreen-mode");
   element.classList.toggle("red-mode");
 }
 
 function changeToGreen() {
   var element = document.body;
-  element.classList.remove("blue-mode", "red-mode", "dark-mode");
+  element.classList.remove("blue-mode", "red-mode", "dark-mode", "lightgreen-mode");
   element.classList.toggle("green-mode");
+}
+
+function changeToLightGreen() {
+  var element = document.body;
+  element.classList.remove("blue-mode", "red-mode", "dark-mode", "green-mode");
+  element.classList.toggle("lightgreen-mode");
 }
 
 function changeToDark() {
   var element = document.body;
-  element.classList.remove("blue-mode", "red-mode", "green-mode");
+  element.classList.remove("blue-mode", "red-mode", "green-mode", "lightgreen-mode");
   element.classList.toggle("dark-mode");
 }
 

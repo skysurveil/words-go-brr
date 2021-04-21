@@ -4,14 +4,38 @@
 
   <section class="signup-form">
     <h2>Sign Up</h2>
+    <?php
+      $variablephp = $_SESSION['currColorTheme'];
+     ?>
+
+    <script>
+    var currTheme = '<?php echo $variablephp; ?>' ;
+    console.log(currTheme);
+    if(currTheme == "blue"){
+      changeToBlue();
+    }
+    else if(currTheme == "red"){
+      changeToRed();
+    }
+    else if(currTheme == "green"){
+      changeToGreen();
+    }
+    else if(currTheme == "lightgreen"){
+      changeToLightGreen();
+    }
+    else if (currTheme == "dark"){
+      changeToDark();
+    }
+    </script>
+
     <form action="includes/signup.inc.php" method="post">
-      <input type="text" name="email" placeholder="Email...">
-      <input type="text" name="userName" placeholder="User name...">
-      <input type="text" name="fName" placeholder="First name...">
-      <input type="text" name="lName" placeholder="Last name...">
-      <input type="password" name="pwd" placeholder="Password...">
-      <input type="password" name="pwdRepeat" placeholder="Repeat Password...">
-      <button type="submit" name="submit">Sign Up</button>
+      <input class="signAndLogin" type="text" name="email" placeholder="Email...">
+      <input class="signAndLogin" type="text" name="userName" placeholder="User name...">
+      <input class="signAndLogin" type="text" name="fName" placeholder="First name...">
+      <input class="signAndLogin" type="text" name="lName" placeholder="Last name...">
+      <input class="signAndLogin" type="password" name="pwd" placeholder="Password...">
+      <input class="signAndLogin" type="password" name="pwdRepeat" placeholder="Repeat Password...">
+      <button class="signAndLogin" type="submit" name="submit">Sign Up</button>
     </form>
     <?php
       if(isset($_GET["error"])) {
