@@ -18,9 +18,10 @@ ul li a {
   display: block;
   text-align: center;
   text-decoration: none;
-  font-size: 32px;
+  font-size: 36px;
   font-family: arial;
-  color: #6b6b68;
+  /*color: #6b6b68;*/
+  color: #1e1e1e;
   padding: 0 20px;
 }
 
@@ -31,13 +32,19 @@ ul li a:hover {
 nav {
   width: 100%;
   height: 100px;
-  background-color: #f7f7e9;
+  background-color: #f7f7e9;/* THIS IS THE CREAM IS NAV BACKGROUND COLOR
+  /* background-color: #E0E3DE; */
+
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 36px;
   font-family: arial;
-  padding-top: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #f7f7e9;
+  text-decoration: none;
+
 }
 
 h2 {
@@ -45,18 +52,20 @@ h2 {
   font-family: arial;
   padding-top: 10px;
   padding-bottom: 20px;
+  color: #f7f7e9;
   text-align: center;
-  text-decoration: underline;
+  text-decoration: none;
 
 }
 
 input.signAndLogin {
   font-size: 18px;
   outline: none;
-  border: 1.5px solid #6cc5eb;
+  border: 1.2px solid #6cc5eb;
   padding: 3px;
   margin: 5px;
   background-color: #f7f7e9;
+  border-radius: 2px;
 }
 
 button.signAndLogin{
@@ -67,11 +76,12 @@ button.signAndLogin{
   padding: 3px;
   margin: 5px;
   background-color: #f7f7e9;
+  border-radius: 2px;
 }
 
 .signup-form {
   padding-top: 10px;
-  
+
 }
 
 .wrapper2 {
@@ -81,12 +91,12 @@ button.signAndLogin{
 body {
   background-color: #1e1e1e;
   text-align: center;
-  color: #8c8c8c;
+  color: #f7f7e9;
 }
 
 .dark-mode {
-  background-color: #262626;
-  color: #8c8c8c;
+  background-color: #1e1e1e;
+  color: #f7f7e9;
 }
 
 .light-mode {
@@ -116,19 +126,46 @@ body {
 
 textarea.inputBox {
   outline: none;
-  max-height: 300px;
-  max-width: 400px;
-  min-width: 100px;
+  max-height: 400px;
+  max-width: 800px;
+  min-width: 200px;
   min-height: 100px;
+  background-color: #f7f7e9;
+  font-size: 20px;
+  border: 1.2px solid #6cc5eb;
+  border-radius: 4px;
+  font-family: arial;
 }
 
 textarea {
-  background-color: #a6a6a6;
+  background-color: #f7f7e9;
   outline: none;
 }
 
+input.readTextButton {
+  font-size: 18px;
+  outline: none;
+  border: none;
+  padding: 3px;
+  margin: 5px;
+  background-color: #f7f7e9;
+  border: 1.2px solid #6cc5eb;
+  border-radius: 4px;
+}
+
+button.readTextButton {
+  font-size: 18px;
+  outline: none;
+  border: none;
+  padding: 3px;
+  margin: 5px;
+  background-color: #f7f7e9;
+  border: 1.2px solid #6cc5eb;
+  border-radius: 4px;
+}
+
 #submitButton {
-  background-color: #a6a6a6;
+  background-color: #f7f7e9;
 }
 
 #resultP {
@@ -137,19 +174,23 @@ textarea {
   text-align: center;
   font-size: xxx-large;
 }
-
+/*
 #swap{
   background-color: #a6a6a6;
 }
-
-#replay{
-  background-color: #a6a6a6;
-}
-
+*/
 #file{
-  background-color: #a6a6a6;
-  color: #262626;
+  background-color: #f7f7e9;
+  color: #1e1e1e;
+  opacity: .9;
+  border: 1.2px solid #6cc5eb;
+  border-radius: 4px;
 }
+
+#file:hover{
+  opacity: 1;
+}
+
 .slidecontainer {
   width: 100%; /* Width of the outside container */
 
@@ -164,9 +205,10 @@ textarea {
   appearance: none;
   width: 40%; /* Full-width */
   height: 25px; /* Specified height */
-  background: #a6a6a6; /* Grey background */
+  /*background: #a6a6a6; /* Grey background */
+  background: #f7f7e9;
   outline: none; /* Remove outline */
-  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  opacity: 0.8; /* Set transparency (for mouse-over effects on hover) */
   -webkit-transition: .2s; /* 0.2 seconds transition on hover */
   transition: opacity .2s;
 }
