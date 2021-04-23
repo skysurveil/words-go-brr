@@ -2,15 +2,40 @@
   include_once 'header.php';
 ?>
 
-  <section class="signup-form">
+  <section class="profile">
     <h2>Profile</h2>
       <ul>
-        <?php
-          echo "<li>Username: " . $_SESSION["userName"] . "</li> ";
-          echo "<li>Name: " . $_SESSION["firstName"] . " " . $_SESSION["lastName"] . "</li> ";
-          echo "<li>Account Creation data: " . $_SESSION["joinDate"] . "</li> ";
-          echo "<li>Score: " . $_SESSION["score"] . "</li> ";
-         ?>
+        <div class="wrapperProfilePage">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <?php
+                echo "<li>Username: " . $_SESSION["userName"] . "</li> ";
+              ?>
+            </div>
+          </div>
+              <div class="row">
+                <div class="col-sm">
+                  <?php
+                    echo "<li>Name: " . $_SESSION["firstName"] . " " . $_SESSION["lastName"] . "</li> ";
+                  ?>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm">
+                  <?php
+                echo "<li>Account Creation date: " . $_SESSION["joinDate"] . "</li> ";
+                ?>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm">
+                <?php
+                echo "<li>Score: " . $_SESSION["score"] . "</li> ";
+               ?>
+             </div>
+           </div>
+        </div>
       </ul>
   </section>
 

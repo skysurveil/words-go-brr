@@ -12,6 +12,7 @@ ul li {
   display: inline-block;
   line-height: 100px;
   text-align: center;
+  font-size: 48px;
 }
 
 ul li a {
@@ -48,18 +49,23 @@ h1 {
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 48px;
   font-family: arial;
   padding-top: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
   color: #f7f7e9;
   text-align: center;
   text-decoration: none;
+}
 
+ul li.container{
+  text-align: center;
+  float: left;
+  font-size: 36px;
 }
 
 input.signAndLogin {
-  font-size: 18px;
+  font-size: 36px;
   outline: none;
   border: 1.2px solid #6cc5eb;
   padding: 3px;
@@ -69,12 +75,13 @@ input.signAndLogin {
 }
 
 button.signAndLogin{
-  font-size: 18px;
+  font-size: 42px;
   outline: none;
   float: bottom;
   border: 1px solid #6cc5eb;
   padding: 3px;
-  margin: 5px;
+  margin: 10px;
+  margin-top: 15px;
   background-color: #f7f7e9;
   border-radius: 2px;
 }
@@ -174,6 +181,7 @@ button.readTextButton {
   text-align: center;
   font-size: xxx-large;
 }
+
 /*
 #swap{
   background-color: #a6a6a6;
@@ -197,13 +205,11 @@ button.readTextButton {
 }
 
 
-
-
 /* The slider itself */
 .slider {
   -webkit-appearance: none;  /* Override default CSS styles */
   appearance: none;
-  width: 40%; /* Full-width */
+  width: 20%; /* Full-width */
   height: 25px; /* Specified height */
   /*background: #a6a6a6; /* Grey background */
   background: #f7f7e9;

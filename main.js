@@ -5,6 +5,7 @@ var wpm = slider.value;//wpm
 var ttsSpeed; /* speed cannot be assigned by radio button here because this is loaded before HTML is done*
 Instead, it is assigned at the beginning of speakText */
 var currentTheme = "";
+var OCR_Array;
 
 
 console.log(wpm);
@@ -76,6 +77,7 @@ function uploadImage(event){
           }
         }
         await worker.terminate();
+
         readTextFromOCR(wordArray);
       })();
 
@@ -89,17 +91,19 @@ async function readText(textInput){
   print = document.getElementById("resultP");
   for(var i=0; i<words.length; i++){
     var word = words[i];
-    console.log(word);
     print.innerHTML = word;
+    // Speed is time that we want to pause
     var speed = 60000/wpm;// this is the number of milliseconds between each word to give you wpm
+    var shortWord = speed * .05; // 10% of speed
+    var longWord = speed * .4; // 40% of speed
+
     if(word.length < 4){
-      await sleep(speed - 15);
+      await sleep(speed - shortWord); // 15
     }else if(word.length < 8){
       await sleep(speed);
     }else{
-      await sleep(speed + 35);
+      await sleep(speed + longWord); // 35
     }
-
   }
   recent = words;
 
@@ -114,12 +118,15 @@ async function readTextFromOCR(textInput){
     var word = textInput[i];
     print.innerHTML = word;
     var speed = 60000/wpm;// this is the number of milliseconds between each word to give you wpm
-    if(word.length < 4){//possible variable speed based on word length
-      await sleep(speed - 15);
+    var shortWord = speed * .05; // 10% of speed
+    var longWord = speed * .4; // 40% of speed
+
+    if(word.length < 4){
+      await sleep(speed - shortWord); // 15
     }else if(word.length < 8){
       await sleep(speed);
     }else{
-      await sleep(speed + 35);
+      await sleep(speed + longWord); // 35
     }
   }
   recent = textInput;
@@ -154,14 +161,16 @@ async function replay(){
     console.log(word);
     print.innerHTML = word;
     var speed = 60000/wpm;// this is the number of milliseconds between each word to give you wpm
+    var shortWord = speed * .05; // 10% of speed
+    var longWord = speed * .4; // 40% of speed
+
     if(word.length < 4){
-      await sleep(speed - 15);
+      await sleep(speed - shortWord); // 15
     }else if(word.length < 8){
       await sleep(speed);
     }else{
-      await sleep(speed + 35);
+      await sleep(speed + longWord); // 35
     }
-
   }
 }
 
@@ -253,8 +262,6 @@ function speak(){
   msg.text = "Testing the text to speech";
   window.speechSynthesis.speak(msg);
 }
-
-
 
 // speakText is the text to speech function that takes user input from getTextTTS
 // as a parameter and handles TTS functionality.

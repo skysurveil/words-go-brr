@@ -7,6 +7,7 @@
   <head>
     <meta charset="utf-8">
     <title>Words Go Brr</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css" id="theme">
   </head>
   <script src="main.js" type="text/javascript"></script>
@@ -16,6 +17,7 @@
     <nav>
         <a href="index.php"></a>
         <ul>
+
           <li><a href= "index.php">Home</a></li>
           <?php
             if(isset($_SESSION["userId"])) {
