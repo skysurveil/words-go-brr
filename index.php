@@ -52,9 +52,10 @@
           <option value="red">Red</option>
           <option value="green">Green</option>
           <option value="lightgreen">Light Green</option>
+          <option value="lightmode">Light Mode</option>
         </select>
         <input onclick="changeTheme()" type="submit" value="Apply">
-        <button onclick="swap()" id="swap">Toggle dark mode</button>
+        <!-- <button onclick="swap()" id="swap">Toggle dark mode</button> -->
       </div>
   <?php
         include_once 'footer.php';

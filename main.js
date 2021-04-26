@@ -5,7 +5,7 @@ var wpm = slider.value;//wpm
 var ttsSpeed; /* speed cannot be assigned by radio button here because this is loaded before HTML is done*
 Instead, it is assigned at the beginning of speakText */
 var currentTheme = "";
-var OCR_Array;
+var OCR_Array = null;
 
 
 console.log(wpm);
@@ -198,6 +198,9 @@ function changeTheme(){
     currTheme = "lightgreen";
     changeToLightGreen();
   }
+  else if (colorTheme == 'lightmode'){
+    changeToLight();
+  }
   else {
     var element = document.body;
     element.classList.remove("blue-mode", "red-mode", "green-mode", "lightgreen-mode");
@@ -226,33 +229,39 @@ function currentTheme(){
   }
 }
 
+function changeToLight(){
+  var element = document.body;
+  element.classList.remove("red-mode", "green-mode", "dark-mode", "lightgreen-mode", "blue-mode");
+  element.classList.toggle("light-mode");
+}
+
 function changeToBlue(){
   var element = document.body;
-  element.classList.remove("red-mode", "green-mode", "dark-mode", "lightgreen-mode");
+  element.classList.remove("red-mode", "green-mode", "dark-mode", "lightgreen-mode", "light-mode");
   element.classList.toggle("blue-mode");
 }
 
 function changeToRed() {
   var element = document.body;
-  element.classList.remove("blue-mode", "green-mode", "dark-mode", "lightgreen-mode");
+  element.classList.remove("blue-mode", "green-mode", "dark-mode", "lightgreen-mode", "light-mode");
   element.classList.toggle("red-mode");
 }
 
 function changeToGreen() {
   var element = document.body;
-  element.classList.remove("blue-mode", "red-mode", "dark-mode", "lightgreen-mode");
+  element.classList.remove("blue-mode", "red-mode", "dark-mode", "lightgreen-mode", "light-mode");
   element.classList.toggle("green-mode");
 }
 
 function changeToLightGreen() {
   var element = document.body;
-  element.classList.remove("blue-mode", "red-mode", "dark-mode", "green-mode");
+  element.classList.remove("blue-mode", "red-mode", "dark-mode", "green-mode", "light-mode");
   element.classList.toggle("lightgreen-mode");
 }
 
 function changeToDark() {
   var element = document.body;
-  element.classList.remove("blue-mode", "red-mode", "green-mode", "lightgreen-mode");
+  element.classList.remove("blue-mode", "red-mode", "green-mode", "lightgreen-mode", "light-mode");
   element.classList.toggle("dark-mode");
 }
 
