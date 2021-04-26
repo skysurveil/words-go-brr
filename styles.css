@@ -136,12 +136,12 @@ body {
 }
 
 .blue-mode {
-  background-color: #99ddff;
+  background-color: #5CD8DA;
   color: black;
 }
 
 .red-mode {
-  background-color: #ff4d4d;
+  background-color: #A82F2F;
   color: white;
 }
 
@@ -150,11 +150,10 @@ body {
   color: black;
 }
 
-.lightgreen-mode {
-  background-color: #82f59f;
+.purple-mode {
+  background-color: #481484;
   color: black;
 }
-
 
 textarea.inputBox {
   outline: none;

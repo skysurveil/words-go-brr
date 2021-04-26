@@ -14,7 +14,7 @@
           <div class="col-sm">
             <form method="GET">
           <input class="readTextButton" onclick="getText(); return false;" id="submitButton" type="button" name="submit" value="Play text!"/>
-          <button class="readTextButton" onclick="getTextTTS()" id="swap">Read the text for me!</button>
+
         </div>
       </div>
       <div class="row">
@@ -30,17 +30,20 @@
         <!-- <br/> -->
       </div>
     </div>
-    
+    <button class="readTextButton" onclick="getTextTTS()">Read the text for me!</button>
+
         <div class="slidecontainer">
           <p class="sliderName" >Display WPM: <span id="wordspermin"></span></p>
           <input type="range" min="200" max="500" step="10" class="slider" id="myRange" value="350" >
         </div>
 
         <script src="main.js" type="text/javascript"></script>
-        <!-- <p id="resultTitle"></p>
-        <p id="resultP"></p> -->
+        <!-- <p id="resultTitle"></p> -->
+        <!-- <p id="resultP"></p> -->
         <p class="ocrToolTip" id="ocrTT">Click below to upload an image of your text</p>
         <p><input type="file"  accept="image/*" name="image" id="file"  onchange="uploadImage(event)" ></p>
+        <button class="readTextButton" onclick="readOCR()">Read OCR'd Text!</button>
+        <button class="readTextButton" onclick="speakOCR()">Read the OCR'd Text for me!</button>
         <p><img id="output" width="200px" /></p>
 
 
@@ -65,7 +68,7 @@
           <option value="blue">Blue</option>
           <option value="red">Red</option>
           <option value="green">Green</option>
-          <option value="lightgreen">Light Green</option>
+          <option value="purple">Purple</option>
           <option value="lightmode">Light Mode</option>
         </select>
         <input onclick="changeTheme()" type="submit" value="Apply">

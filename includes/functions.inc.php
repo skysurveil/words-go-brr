@@ -128,5 +128,4 @@ function loginUser($conn, $userName, $pwd){
     header("location: ../index.php?error=none");
     exit();
   }
-
 }
