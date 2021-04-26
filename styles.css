@@ -30,6 +30,30 @@ ul li a:hover {
   color: #6cc5eb;
 }
 
+.ocrToolTip{
+  font-style: arial;
+  font-size: 24px;
+  padding: 0px;
+  margin-bottom: 5px;
+}
+
+.uploadWrapper {
+
+  align: center;
+}
+
+input.uploadImage {
+  margin = 0px;
+  padding = 0px;
+  text-align: center;
+}
+
+p.res1 {
+  padding: 0 20px;
+  color: yellow;
+  text-align: center;
+}
+
 nav {
   width: 100%;
   height: 100px;
@@ -39,7 +63,7 @@ nav {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 48px;
   font-family: arial;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -199,17 +223,21 @@ button.readTextButton {
   opacity: 1;
 }
 
+p.sliderName {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
 .slidecontainer {
   width: 100%; /* Width of the outside container */
 
 }
 
-
 /* The slider itself */
 .slider {
   -webkit-appearance: none;  /* Override default CSS styles */
   appearance: none;
-  width: 20%; /* Full-width */
+  width: 33%; /* Full-width */
   height: 25px; /* Specified height */
   /*background: #a6a6a6; /* Grey background */
   background: #f7f7e9;
@@ -217,6 +245,9 @@ button.readTextButton {
   opacity: 0.8; /* Set transparency (for mouse-over effects on hover) */
   -webkit-transition: .2s; /* 0.2 seconds transition on hover */
   transition: opacity .2s;
+  border: 1.2px solid #6cc5eb;
+  border-radius: 4px;
+  margin-bottom: 15px;
 }
 
 /* Mouse-over effects */
@@ -228,9 +259,11 @@ button.readTextButton {
   -webkit-appearance: none; /* Override default look */
   appearance: none;
   width: 25px; /* Set a specific slider handle width */
-  height: 35px; /* Slider handle height */
+  height: 30px; /* Slider handle height */
   background: #969696; /* Green background */
   cursor: pointer; /* Cursor on hover */
+  border: 1.2px solid #6cc5eb;
+  border-radius: 8px;
 }
 
 .slider::-moz-range-thumb {

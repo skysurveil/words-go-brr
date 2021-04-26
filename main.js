@@ -47,6 +47,7 @@ function uploadImage(event){
     var image = document.getElementById('output');
     image.src = URL.createObjectURL(event.target.files[0]);
     image.onload = function(){
+
       const {createWorker} = Tesseract;
 
       // Trying to add a logger.
