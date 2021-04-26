@@ -5,7 +5,7 @@
   <h1>WordsGoBrr.com</h1>
 
   <!-- <p class="res1" id="resultTitle">temp</p> -->
-  <p class="res1" id="resultP">YourText</p>
+  <p class="res1" id="resultP">Output</p>
 
   <body>
     <div class="wrapper2">
@@ -28,13 +28,9 @@
           </form>
           <button class="readTextButton" onclick="replay()" id="replay">replay</button>
         <!-- <br/> -->
-
       </div>
     </div>
-
-
-
-
+    
         <div class="slidecontainer">
           <p class="sliderName" >Display WPM: <span id="wordspermin"></span></p>
           <input type="range" min="200" max="500" step="10" class="slider" id="myRange" value="350" >
@@ -70,9 +66,10 @@
           <option value="red">Red</option>
           <option value="green">Green</option>
           <option value="lightgreen">Light Green</option>
+          <option value="lightmode">Light Mode</option>
         </select>
         <input onclick="changeTheme()" type="submit" value="Apply">
-        <button onclick="swap()" id="swap">Toggle dark mode</button>
+        <!-- <button onclick="swap()" id="swap">Toggle dark mode</button> -->
       </div>
   <?php
         include_once 'footer.php';

@@ -115,6 +115,16 @@ function loginUser($conn, $userName, $pwd){
     $_SESSION["lastName"] = $uidExists["userLastName"];
     $_SESSION["joinDate"] = $uidExists["userCreateDate"];
     $_SESSION["score"] = $uidExists["userScore"];
+
+    //Increase score by 1 for logging in
+    $sql = "UPDATE User SET userScore  = userScore + 1 WHERE userID = " . $_SESSION["userId"] . ";";
+    $stmt = mysqli_stmt_init($conn);
+    if(!mysqli_stmt_prepare($stmt, $sql)) {
+      header("location: ../login.php?error=stmtfailedonIncScore");
+      exit();
+    }
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
     header("location: ../index.php?error=none");
     exit();
   }

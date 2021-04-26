@@ -131,7 +131,7 @@ body {
 }
 
 .light-mode {
-  background-color: #ebebeb;
+  background-color: #D3D3D3;
   color: black;
 }
 
@@ -154,6 +154,7 @@ body {
   background-color: #82f59f;
   color: black;
 }
+
 
 textarea.inputBox {
   outline: none;
