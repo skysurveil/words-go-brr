@@ -1,43 +1,202 @@
-body {
-  background-color: #262626;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+
+}
+
+ul li {
+  list-style: none;
+  display: inline-block;
+  line-height: 100px;
   text-align: center;
-  color: #8c8c8c;
+  font-size: 48px;
+}
+
+ul li a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 36px;
+  font-family: arial;
+  /*color: #6b6b68;*/
+  color: #1e1e1e;
+  padding: 0 20px;
+}
+
+ul li a:hover {
+  color: #6cc5eb;
+}
+
+.ocrToolTip{
+  font-style: arial;
+  font-size: 24px;
+  padding: 0px;
+  margin-bottom: 5px;
+}
+
+.uploadWrapper {
+
+  align: center;
+}
+
+input.uploadImage {
+  margin = 0px;
+  padding = 0px;
+  text-align: center;
+}
+
+p.res1 {
+  padding: 0 20px;
+  color: yellow;
+  text-align: center;
+}
+
+nav {
+  width: 100%;
+  height: 100px;
+  background-color: #f7f7e9;/* THIS IS THE CREAM IS NAV BACKGROUND COLOR
+  /* background-color: #E0E3DE; */
+
+}
+
+h1 {
+  font-size: 48px;
+  font-family: arial;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #f7f7e9;
+  text-decoration: none;
+
+}
+
+h2 {
+  font-size: 48px;
+  font-family: arial;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  color: #f7f7e9;
+  text-align: center;
+  text-decoration: none;
+}
+
+ul li.container{
+  text-align: center;
+  float: left;
+  font-size: 36px;
+}
+
+input.signAndLogin {
+  font-size: 36px;
+  outline: none;
+  border: 1.2px solid #6cc5eb;
+  padding: 3px;
+  margin: 5px;
+  background-color: #f7f7e9;
+  border-radius: 2px;
+}
+
+button.signAndLogin{
+  font-size: 42px;
+  outline: none;
+  float: bottom;
+  border: 1px solid #6cc5eb;
+  padding: 3px;
+  margin: 10px;
+  margin-top: 15px;
+  background-color: #f7f7e9;
+  border-radius: 2px;
+}
+
+.signup-form {
+  padding-top: 10px;
+
+}
+
+.wrapper2 {
+  padding: 10px;
+}
+
+body {
+  background-color: #1e1e1e;
+  text-align: center;
+  color: #f7f7e9;
 }
 
 .dark-mode {
-  background-color: #262626;
-  color: #8c8c8c;
+  background-color: #1e1e1e;
+  color: #f7f7e9;
 }
 
 .light-mode {
-  background-color: #ebebeb;
+  background-color: #D3D3D3;
   color: black;
 }
 
 .blue-mode {
-  background-color: #99ddff;
+  background-color: #5CD8DA;
   color: black;
 }
 
 .red-mode {
-  background-color: #ff4d4d;
+  background-color: #A82F2F;
   color: white;
 }
 
 .green-mode {
-  background-color: #00e600;
+  background-color: #02a80c;
   color: black;
 }
 
+.purple-mode {
+  background-color: #481484;
+  color: black;
+}
 
-
+textarea.inputBox {
+  outline: none;
+  max-height: 400px;
+  max-width: 800px;
+  min-width: 200px;
+  min-height: 100px;
+  background-color: #f7f7e9;
+  font-size: 20px;
+  border: 1.2px solid #6cc5eb;
+  border-radius: 4px;
+  font-family: arial;
+}
 
 textarea {
-  background-color: #a6a6a6;
+  background-color: #f7f7e9;
+  outline: none;
+}
+
+input.readTextButton {
+  font-size: 18px;
+  outline: none;
+  border: none;
+  padding: 3px;
+  margin: 5px;
+  background-color: #f7f7e9;
+  border: 1.2px solid #6cc5eb;
+  border-radius: 4px;
+}
+
+button.readTextButton {
+  font-size: 18px;
+  outline: none;
+  border: none;
+  padding: 3px;
+  margin: 5px;
+  background-color: #f7f7e9;
+  border: 1.2px solid #6cc5eb;
+  border-radius: 4px;
 }
 
 #submitButton {
-  background-color: #a6a6a6;
+  background-color: #f7f7e9;
 }
 
 #resultP {
@@ -47,37 +206,48 @@ textarea {
   font-size: xxx-large;
 }
 
+/*
 #swap{
   background-color: #a6a6a6;
 }
-
-#replay{
-  background-color: #a6a6a6;
-}
-
+*/
 #file{
-  background-color: #a6a6a6;
-  color: #262626;
+  background-color: #f7f7e9;
+  color: #1e1e1e;
+  opacity: .9;
+  border: 1.2px solid #6cc5eb;
+  border-radius: 4px;
 }
+
+#file:hover{
+  opacity: 1;
+}
+
+p.sliderName {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
 .slidecontainer {
   width: 100%; /* Width of the outside container */
 
 }
 
-
-
-
 /* The slider itself */
 .slider {
   -webkit-appearance: none;  /* Override default CSS styles */
   appearance: none;
-  width: 40%; /* Full-width */
+  width: 33%; /* Full-width */
   height: 25px; /* Specified height */
-  background: #a6a6a6; /* Grey background */
+  /*background: #a6a6a6; /* Grey background */
+  background: #f7f7e9;
   outline: none; /* Remove outline */
-  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  opacity: 0.8; /* Set transparency (for mouse-over effects on hover) */
   -webkit-transition: .2s; /* 0.2 seconds transition on hover */
   transition: opacity .2s;
+  border: 1.2px solid #6cc5eb;
+  border-radius: 4px;
+  margin-bottom: 15px;
 }
 
 /* Mouse-over effects */
@@ -89,9 +259,11 @@ textarea {
   -webkit-appearance: none; /* Override default look */
   appearance: none;
   width: 25px; /* Set a specific slider handle width */
-  height: 35px; /* Slider handle height */
+  height: 30px; /* Slider handle height */
   background: #969696; /* Green background */
   cursor: pointer; /* Cursor on hover */
+  border: 1.2px solid #6cc5eb;
+  border-radius: 8px;
 }
 
 .slider::-moz-range-thumb {
